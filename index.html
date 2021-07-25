@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--  Taken few snippets from https://bootdey.com  -->
+    <!--  All snippets are MIT license https://bootdey.com/license -->
+    <title>WhatsApp Chat List using Doubly Linked List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="script.js" type="module"></script>
+    
+    
+</head>
+<body>
+    <nav class="sticky-top">
+        <div>
+            <div class="text-center mt-1">
+                <h5 style="font-weight: bold;">WhatsApp ChatList Using Doubly Linked List</h5>    
+            </div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="container2">
+            <div class="ks-messenger">
+                <div class="ks-discussions">
+                    <div class="ks-header">
+                        <span class="col-4" style="text-align: center">
+                            <i class="fas fa-comments" id="numberOfChats" style="color: rgb(0, 255, 34)"> </i>
+                        </span>
+                                <span class="col-4" style="text-align: center">
+                            <i class="fas fa-video" style="color: rgb(0, 255, 34)"></i>
+                        </span>
+                                <span class="col-4" style="text-align: center">
+                            <i class="fas fa-stream" style="color: rgb(0, 255, 34)"></i>
+                        </span>
+                    </div>
+                    <div class="ks-body ks-scrollable jspScrollable" data-auto-height="" style="height: 400px; overflow-y: auto; padding: 0px; width: 339px;" tabindex="0">
+
+                        <div class="jspContainer">
+                            <div class="jspPane" style="padding: 0px; top: 0px; width: 339px;">
+                                <ul class="ks-items" id="chat-list" style="font-weight: bold;">
+
+                                </ul>
+                            </div>
+                            <div class="jspVerticalBar">
+                                <div class="jspCap jspCapTop"></div>
+                                <div class="jspTrack" style="height: 100px;">
+                                    <div class="jspDrag">
+                                        <div class="jspDragTop"></div>
+                                        <div class="jspDragBottom"></div>
+                                    </div>
+                                </div>
+                                <div class="jspCap jspCapBottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2" style="overflow-y: scroll; height: 512px; padding-top: 40px">
+            <div id="parent_row1">
+                <span id="temptext" style="height: 100%; width: 50%; text-align: left; font-size: large; font-weight: bold;">
+                    <span style="color: rgb(0, 255, 34); font-weight: bold;"></span>
+                </span>
+            </div>
+            <div id="parent_row2">
+                <span id="temptext2" style="height: 100%; width: 50%; text-align: right; font-size: large; font-weight: bold;">
+                    <span style="color: rgb(0, 255, 34); font-weight: bold;"></span>
+                </span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container3">
+        <h6>By <span><a href="https://www.linkedin.com/in/amandeep-singh-9241061a6/">
+                Amandeep 😃</a></span> 
+        </h6>
+        <button type="button" id="generate-step" style="margin: auto">GENERATE NEW STEP</button>
+        <button type="button" id="insert-a-chat" style="margin: auto">Insert A Chat</button>
+        <button type="button" id="delete-a-chat" style="margin: auto">Delete A Chat</button>
+    </div>
+
+    <template>
+        <li class="ks-item" id="ChatListItem">
+            <a href="#">
+            <span class="ks-avatar">
+                <img src="./images/avatar1.png" width="36" height="36" id="Image"></img>
+            </span>
+                <div class="ks-body">
+                    <div class="ks-name">
+                        <span id="Name">Amandeep Singh</span>
+                        <span id="Time" class="ks-datetime">just now</span>
+                    </div>
+                    <div class="ks-message" id="Message">Why didn't he come and talk to me ?</div>
+                </div>
+            </a>
+        </li>
+    </template>
+</body>
+</html>
